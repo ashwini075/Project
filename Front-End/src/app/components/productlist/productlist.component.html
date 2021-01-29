@@ -1,0 +1,48 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="container">
+    <h2> Product List</h2>
+    <table class = "table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>  Name</th>
+                <th>  Description </th>
+                <th>  Quantity </th>
+                <th>  Cost Price </th>
+                <th>  Selling Price </th>
+                <th> Update</th>
+                <th> Delete </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let product of prod" >
+                <td> {{ product.productName }} </td>
+                <td> {{ product.productDescription }} </td>
+                <td> {{ product.productQuantity }} </td>
+                <td> {{ product.productCostPrice }} </td>
+                <td> {{ product.productSellingPrice }} </td>
+                
+                <td>
+                    <button (click) = "updateProduct(product.productId)" class = "btn btn-info"> Update</button>
+                </td><td>  <button (click) = "deleteProduct(product.productId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
